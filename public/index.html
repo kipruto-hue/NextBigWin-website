@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NextBigWin — Kenya's largest youth raffle. Win life-changing prizes for just KES 100. Real draws. Real winners. Live-streamed every Friday." />
+  <meta name="keywords" content="NextBigWin, Kenya raffle, win prizes, MPESA, 100 bob, youth raffle Kenya" />
+  <meta property="og:title" content="NextBigWin — Dream Bigger for Just 100 Bob" />
+  <meta property="og:description" content="Kenya's largest youth raffle. Win cars, phones, laptops & cash. Only KES 100 per ticket." />
+  <meta property="og:image" content="assets/logo.png" />
+  <title>NextBigWin — Kenya's Largest Youth Raffle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="assets/logo.png" alt="NextBigWin" class="logo-img" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#prizes">Prizes</a></li>
+        <li><a href="#winners">Winners</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="#buy" class="btn-primary nav-cta">Buy Ticket</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#how-it-works">How It Works</a>
+      <a href="#prizes">Prizes</a>
+      <a href="#winners">Winners</a>
+      <a href="#faq">FAQ</a>
+      <a href="#buy" class="btn-primary">Buy Ticket — KES 100</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-glow g1"></div>
+      <div class="hero-glow g2"></div>
+      <div class="hero-grid"></div>
+      <canvas id="particles"></canvas>
+    </div>
+    <div class="hero-content">
+      <div class="live-badge">
+        <span class="dot green"></span>
+        Live Draw Every Friday 8PM EAT
+      </div>
+      <h1 class="hero-title">
+        Win Big.<br />
+        <span class="gold">Dream Bigger.</span><br />
+        Only <span class="gold">100 Bob.</span>
+      </h1>
+      <p class="hero-sub">
+        Kenya's largest youth raffle. Real prizes. Real people. Live-streamed draws every Friday.<br />
+        Your name could be called tonight.
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <strong>50,000+</strong>
+          <span>Tickets Sold</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <strong>KES 2M+</strong>
+          <span>Prizes Given</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <strong>1,200+</strong>
+          <span>Winners</span>
+        </div>
+      </div>
+      <div class="hero-ctas">
+        <a href="#buy" class="btn-primary btn-glow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20 12V6H4v6a2 2 0 002 2h12a2 2 0 002-2zM2 6a2 2 0 012-2h16a2 2 0 012 2v6a4 4 0 01-4 4H6a4 4 0 01-4-4V6zm8 9h4v1a2 2 0 01-4 0v-1z"/></svg>
+          Buy Ticket Now
+        </a>
+        <a href="#how-it-works" class="btn-ghost">
+          See How It Works
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       HOW IT WORKS
+  ═══════════════════════════════════════ -->
+  <section class="section hiw" id="how-it-works">
+    <div class="container">
+      <div class="sec-head">
+        <span class="tag">Simple &amp; Fast</span>
+        <h2>How to Win in <span class="gold">4 Steps</span></h2>
+        <p>No apps. No queues. Just your phone.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-num">01</div>
+          <div class="step-icon">📱</div>
+          <h3>Dial or Pay</h3>
+          <p>Dial <strong class="gold">*123#</strong> from any phone on any network, or send <strong class="gold">KES 100</strong> via M-PESA Paybill.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step reveal" style="--d:.1s">
+          <div class="step-num">02</div>
+          <div class="step-icon">📩</div>
+          <h3>Get Your Ticket ID</h3>
+          <p>Receive your unique <strong class="gold">Ticket ID</strong> instantly via SMS. It's your key to winning — keep it safe.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step reveal" style="--d:.2s">
+          <div class="step-num">03</div>
+          <div class="step-icon">📺</div>
+          <h3>Watch Live Draw</h3>
+          <p>Join us live on <strong class="gold">TikTok, Instagram</strong> or <strong class="gold">YouTube</strong> every Friday at 8PM EAT.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step reveal" style="--d:.3s">
+          <div class="step-num">04</div>
+          <div class="step-icon">🏆</div>
+          <h3>Win &amp; Claim</h3>
+          <p>Winners called live. Claim your prize within <strong class="gold">30 days</strong> with your National ID + Ticket ID.</p>
+        </div>
+      </div>
+      <div class="ussd-banner reveal">
+        <p class="ussd-label">Quick Entry via USSD</p>
+        <div class="ussd-code">*123#</div>
+        <p class="ussd-sub">Or M-PESA Paybill: <strong class="gold">123456</strong> &nbsp;·&nbsp; Account: <strong class="gold">NBW</strong> &nbsp;·&nbsp; Amount: <strong class="gold">KES 100</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PRIZES
+  ═══════════════════════════════════════ -->
+  <section class="section prizes-section" id="prizes">
+    <div class="container">
+      <div class="sec-head">
+        <span class="tag tag-red"><span class="dot red"></span> Live Raffle Open</span>
+        <h2>This Week's <span class="gold">Prizes</span></h2>
+        <p>Draw closes Friday 7PM. Don't miss your chance.</p>
+      </div>
+
+      <!-- Grand Prize -->
+      <div class="grand-prize reveal">
+        <div class="grand-badge">ENDING SOON</div>
+        <div class="grand-inner">
+          <div class="grand-visual">
+            <div class="grand-img-box">
+              <span class="grand-emoji">🚗</span>
+              <div class="img-shine"></div>
+            </div>
+            <div class="grand-glow"></div>
+          </div>
+          <div class="grand-info">
+            <span class="tier-label">GRAND PRIZE</span>
+            <h3>Toyota Vitz 2023</h3>
+            <p class="grand-value">Worth KES 1,200,000</p>
+            <p class="grand-desc">Drive away in your dream car. One lucky Kenyan wins it all — for just 100 bob. That could be you.</p>
+            <div class="prize-meta">
+              <span>Tickets sold: <strong>34,521</strong></span>
+              <span>Your odds: <strong class="gold">Better every day</strong></span>
+            </div>
+            <a href="#buy" class="btn-primary btn-glow">Enter Now — KES 100</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weekly Prizes Carousel -->
+      <h3 class="weekly-heading">Also Winning This Week</h3>
+      <div class="prizes-track" id="prizesTrack">
+        <div class="prize-card reveal">
+          <div class="prize-live-chip"><span class="dot red"></span> LIVE NOW</div>
+          <div class="p-icon">📱</div>
+          <h4>iPhone 16 Pro</h4>
+          <p>KES 200,000</p>
+          <a href="#buy" class="btn-sm">Enter</a>
+        </div>
+        <div class="prize-card reveal" style="--d:.05s">
+          <div class="prize-live-chip"><span class="dot red"></span> LIVE NOW</div>
+          <div class="p-icon">💻</div>
+          <h4>MacBook Air M2</h4>
+          <p>KES 180,000</p>
+          <a href="#buy" class="btn-sm">Enter</a>
+        </div>
+        <div class="prize-card reveal" style="--d:.1s">
+          <div class="p-icon">📺</div>
+          <h4>Samsung 65" TV</h4>
+          <p>KES 85,000</p>
+          <a href="#buy" class="btn-sm">Enter</a>
+        </div>
+        <div class="prize-card reveal" style="--d:.15s">
+          <div class="p-icon">🎮</div>
+          <h4>PlayStation 5</h4>
+          <p>KES 75,000</p>
+          <a href="#buy" class="btn-sm">Enter</a>
+        </div>
+        <div class="prize-card reveal" style="--d:.2s">
+          <div class="p-icon">💰</div>
+          <h4>Cash Prize</h4>
+          <p>KES 50,000</p>
+          <a href="#buy" class="btn-sm">Enter</a>
+        </div>
+        <div class="prize-card reveal" style="--d:.25s">
+          <div class="p-icon">📶</div>
+          <h4>Airtime Bundle</h4>
+          <p>KES 5,000 × 10</p>
+          <a href="#buy" class="btn-sm">Enter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       TRUST
+  ═══════════════════════════════════════ -->
+  <section class="section trust-section" id="trust">
+    <div class="container">
+      <div class="sec-head">
+        <span class="tag">100% Legit</span>
+        <h2>Built on <span class="gold">Trust</span></h2>
+        <p>We're not just another raffle. We're Kenya's most transparent.</p>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-card reveal">
+          <div class="trust-ico">🔒</div>
+          <h4>Escrow-Protected Funds</h4>
+          <p>All ticket proceeds are held in a licensed escrow account until the draw date. Your money is secure — always.</p>
+        </div>
+        <div class="trust-card reveal" style="--d:.1s">
+          <div class="trust-ico">🎲</div>
+          <h4>RNG-Certified Draw System</h4>
+          <p>Winners selected by an independently certified Random Number Generator. Zero human influence. Zero bias.</p>
+        </div>
+        <div class="trust-card trust-featured reveal" style="--d:.2s">
+          <div class="trust-ico">🏛️</div>
+          <h4>BCLB Licensed</h4>
+          <p>Fully licensed and regulated by the Betting Control &amp; Licensing Board of Kenya. We comply with all national laws.</p>
+          <span class="license-chip">License #BCLB-2024-XXX</span>
+        </div>
+        <div class="trust-card reveal" style="--d:.1s">
+          <div class="trust-ico">📡</div>
+          <h4>Live-Streamed Every Draw</h4>
+          <p>Every draw is broadcast LIVE on TikTok, Instagram, and YouTube. You watch the winner selected in real time.</p>
+        </div>
+        <div class="trust-card reveal" style="--d:.2s">
+          <div class="trust-ico">✅</div>
+          <h4>SMS Verification System</h4>
+          <p>Every ticket is linked to a phone number. Every winner is verified via National ID + SMS before claiming any prize.</p>
+        </div>
+      </div>
+      <div class="trust-statement reveal">
+        <div class="shield">🛡️</div>
+        <blockquote>"NextBigWin operates with full transparency. Every shilling is accounted for, every draw is witnessed live, every winner is verified before payout."</blockquote>
+        <cite>— NextBigWin Management</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       WINNERS / SOCIAL PROOF
+  ═══════════════════════════════════════ -->
+  <section class="section winners-section" id="winners">
+    <div class="container">
+      <div class="sec-head">
+        <span class="tag">Social Proof</span>
+        <h2>Real People. <span class="gold">Real Wins.</span></h2>
+        <p>Over 1,200 Kenyans have already changed their lives with NextBigWin.</p>
+      </div>
+      <div class="winners-grid">
+        <div class="winner-card winner-featured reveal">
+          <div class="wf-avatar" style="--c1:#D4AF37;--c2:#8B6914">
+            JM
+            <div class="play-btn" title="Watch video">▶</div>
+          </div>
+          <span class="w-prize-tag">🚗 Car Winner</span>
+          <h4>James M.</h4>
+          <p class="w-loc">Nairobi, Kenya</p>
+          <blockquote>"I almost didn't buy that ticket. That 100 bob changed my entire life. I drive my own car to work now."</blockquote>
+          <span class="w-draw">Draw #47 — March 2026</span>
+        </div>
+        <div class="winner-card reveal" style="--d:.1s">
+          <div class="w-avatar" style="--c1:#667eea;--c2:#764ba2">AW</div>
+          <span class="w-prize-tag">📱 iPhone 16 Pro</span>
+          <h4>Amina W.</h4>
+          <p class="w-loc">Mombasa, Kenya</p>
+          <blockquote>"I bought 2 tickets on a Friday morning. By 8PM I was a winner. Unbelievable!"</blockquote>
+        </div>
+        <div class="winner-card reveal" style="--d:.2s">
+          <div class="w-avatar" style="--c1:#f093fb;--c2:#f5576c">DO</div>
+          <span class="w-prize-tag">💻 MacBook Air</span>
+          <h4>David O.</h4>
+          <p class="w-loc">Kisumu, Kenya</p>
+          <blockquote>"Best 100 bob I ever spent. The laptop helped me freelance and earn more than my salary."</blockquote>
+        </div>
+        <div class="winner-card reveal" style="--d:.1s">
+          <div class="w-avatar" style="--c1:#4facfe;--c2:#00f2fe">FN</div>
+          <span class="w-prize-tag">💰 KES 50,000</span>
+          <h4>Faith N.</h4>
+          <p class="w-loc">Nakuru, Kenya</p>
+          <blockquote>"I used the prize money to pay my college fees. NextBigWin is genuinely life-changing."</blockquote>
+        </div>
+        <div class="winner-card reveal" style="--d:.2s">
+          <div class="w-avatar" style="--c1:#43e97b;--c2:#38f9d7">BK</div>
+          <span class="w-prize-tag">🎮 PlayStation 5</span>
+          <h4>Brian K.</h4>
+          <p class="w-loc">Eldoret, Kenya</p>
+          <blockquote>"When they called my number live, I literally screamed. My whole estate heard me!"</blockquote>
+        </div>
+        <div class="winner-card reveal" style="--d:.3s">
+          <div class="w-avatar" style="--c1:#fa709a;--c2:#fee140">SM</div>
+          <span class="w-prize-tag">📺 Samsung TV</span>
+          <h4>Sarah M.</h4>
+          <p class="w-loc">Thika, Kenya</p>
+          <blockquote>"I was skeptical. The live draw proved everything. Highly recommend NextBigWin!"</blockquote>
+        </div>
+      </div>
+      <div class="winners-cta reveal">
+        <p>Your name could be next.</p>
+        <a href="#buy" class="btn-primary btn-glow">Buy Your Ticket</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       COUNTDOWN
+  ═══════════════════════════════════════ -->
+  <section class="section countdown-section" id="countdown">
+    <div class="cd-bg">
+      <div class="cd-glow"></div>
+    </div>
+    <div class="container">
+      <div class="cd-content reveal">
+        <p class="cd-label">⚡ Next Draw In:</p>
+        <div class="cd-timer">
+          <div class="cd-block">
+            <span class="cd-digits" id="cd-days">00</span>
+            <span class="cd-unit">Days</span>
+          </div>
+          <span class="cd-sep">:</span>
+          <div class="cd-block">
+            <span class="cd-digits" id="cd-hours">00</span>
+            <span class="cd-unit">Hours</span>
+          </div>
+          <span class="cd-sep">:</span>
+          <div class="cd-block">
+            <span class="cd-digits" id="cd-mins">00</span>
+            <span class="cd-unit">Minutes</span>
+          </div>
+          <span class="cd-sep">:</span>
+          <div class="cd-block">
+            <span class="cd-digits" id="cd-secs">00</span>
+            <span class="cd-unit">Seconds</span>
+          </div>
+        </div>
+        <p class="cd-sub" id="cd-date-label">Next draw: Friday at 8:00 PM EAT</p>
+        <a href="#buy" class="btn-primary btn-pulse">Secure Your Ticket Before It's Too Late</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       BUY TICKET
+  ═══════════════════════════════════════ -->
+  <section class="section buy-section" id="buy">
+    <div class="container">
+      <div class="sec-head">
+        <span class="tag">Enter Now</span>
+        <h2>Get Your <span class="gold">Ticket</span></h2>
+        <p>Just KES 100. Two easy ways to enter.</p>
+      </div>
+      <div class="buy-options">
+        <div class="buy-card buy-primary reveal">
+          <div class="buy-ico">📱</div>
+          <h3>Via USSD</h3>
+          <div class="buy-code">*123#</div>
+          <p>Works on any phone. No internet needed. Any network.</p>
+          <ol class="buy-steps">
+            <li>Dial <strong>*123#</strong></li>
+            <li>Select <strong>"NextBigWin"</strong></li>
+            <li>Pay <strong>KES 100</strong></li>
+            <li>Receive your <strong>Ticket ID via SMS</strong></li>
+          </ol>
+          <a href="tel:*123%23" class="btn-primary">Dial *123# Now</a>
+        </div>
+        <div class="buy-or">OR</div>
+        <div class="buy-card reveal" style="--d:.1s">
+          <div class="buy-ico">💚</div>
+          <h3>Via M-PESA</h3>
+          <div class="mpesa-details">
+            <div class="mpesa-row"><span>Paybill Number</span><strong class="gold">123456</strong></div>
+            <div class="mpesa-row"><span>Account Name</span><strong class="gold">NBW</strong></div>
+            <div class="mpesa-row"><span>Amount</span><strong class="gold">KES 100</strong></div>
+          </div>
+          <p>Ticket ID sent via SMS within 60 seconds of payment.</p>
+          <a href="https://wa.me/254700000000?text=I%20want%20to%20buy%20a%20NextBigWin%20ticket%20via%20MPESA" class="btn-ghost" target="_blank">Get Help on WhatsApp</a>
+        </div>
+      </div>
+      <div class="packages-section reveal">
+        <p class="pkg-intro">💡 <strong>Buy more tickets, multiply your chances.</strong> Each ticket is an independent entry.</p>
+        <div class="packages">
+          <div class="pkg">
+            <span class="pkg-n">1 Ticket</span>
+            <span class="pkg-p">KES 100</span>
+          </div>
+          <div class="pkg pkg-hot">
+            <span class="pkg-badge">MOST POPULAR</span>
+            <span class="pkg-n">5 Tickets</span>
+            <span class="pkg-p">KES 500</span>
+          </div>
+          <div class="pkg">
+            <span class="pkg-n">10 Tickets</span>
+            <span class="pkg-p">KES 1,000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FAQ
+  ═══════════════════════════════════════ -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="sec-head">
+        <span class="tag">Got Questions?</span>
+        <h2>Everything You <span class="gold">Need to Know</span></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q">How much is a ticket? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Each ticket costs <strong>KES 100</strong>. You can buy as many tickets as you want — each is an independent chance to win. No hidden charges.</p></div>
+        </div>
+        <div class="faq-item reveal" style="--d:.05s">
+          <button class="faq-q">How do I buy a ticket? <span class="faq-icon">+</span></button>
+          <div class="faq-a">
+            <p>Two ways to enter:</p>
+            <ol>
+              <li><strong>USSD:</strong> Dial *123# from any phone on any network</li>
+              <li><strong>M-PESA Paybill:</strong> Send KES 100 to Paybill 123456, Account: NBW</li>
+            </ol>
+            <p>You'll receive your unique Ticket ID via SMS within 60 seconds.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="--d:.1s">
+          <button class="faq-q">How are winners selected? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Winners are selected using a <strong>certified Random Number Generator (RNG)</strong> system. Every draw is conducted live on TikTok, Instagram, and YouTube every Friday at 8PM EAT. No human can influence the result.</p></div>
+        </div>
+        <div class="faq-item reveal" style="--d:.15s">
+          <button class="faq-q">How do I claim my prize? <span class="faq-icon">+</span></button>
+          <div class="faq-a">
+            <p>If you win, our team contacts you within 24 hours. You'll need to:</p>
+            <ol>
+              <li>Confirm your Ticket ID</li>
+              <li>Provide your National ID</li>
+              <li>Visit our Nairobi office or arrange delivery for physical prizes</li>
+            </ol>
+            <p>Prizes must be claimed within <strong>30 days</strong> of the draw.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="--d:.2s">
+          <button class="faq-q">Who can participate? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Any Kenyan citizen aged <strong>18 years or older</strong> with a valid phone number. The number is used to deliver your Ticket ID and to contact you if you win.</p></div>
+        </div>
+        <div class="faq-item reveal" style="--d:.25s">
+          <button class="faq-q">Are tickets refundable? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Tickets are <strong>non-refundable</strong> once purchased. Each ticket is valid only for the specific draw it was purchased for and does not carry over.</p></div>
+        </div>
+        <div class="faq-item reveal" style="--d:.3s">
+          <button class="faq-q">Is NextBigWin legal and licensed? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Yes. NextBigWin is fully licensed and regulated by the <strong>Betting Control and Licensing Board (BCLB) of Kenya</strong> under License #BCLB-2024-XXX. We comply with all applicable Kenyan laws and regulations.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       TERMS SUMMARY
+  ═══════════════════════════════════════ -->
+  <section class="section terms-section" id="terms">
+    <div class="container">
+      <div class="terms-box reveal">
+        <h3>Key Terms &amp; Conditions</h3>
+        <ul class="terms-list">
+          <li><span class="terms-check">✓</span> Participants must be 18 years of age or older</li>
+          <li><span class="terms-check">✓</span> All tickets are non-refundable once purchased</li>
+          <li><span class="terms-check">✓</span> Winners verified via National ID and the phone number linked to the winning ticket</li>
+          <li><span class="terms-check">✓</span> Prizes must be claimed within 30 days of the draw date</li>
+          <li><span class="terms-check">✓</span> NextBigWin is governed by the laws of the Republic of Kenya</li>
+          <li><span class="terms-check">✓</span> All draws conducted under BCLB license and fully live-streamed for transparency</li>
+        </ul>
+        <a href="#" class="terms-link">Read Full Terms &amp; Conditions →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FINAL CTA
+  ═══════════════════════════════════════ -->
+  <section class="final-cta" id="final-cta">
+    <div class="final-bg">
+      <div class="hero-glow g1"></div>
+      <div class="hero-glow g2"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="container">
+      <div class="final-content reveal">
+        <h2 class="final-h">Don't Just Watch.<br /><span class="gold">Win.</span></h2>
+        <p>For just 100 bob, you could be our next headline. The only losing move is not trying.</p>
+        <a href="#buy" class="btn-primary btn-glow final-btn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20 12V6H4v6a2 2 0 002 2h12a2 2 0 002-2zM2 6a2 2 0 012-2h16a2 2 0 012 2v6a4 4 0 01-4 4H6a4 4 0 01-4-4V6zm8 9h4v1a2 2 0 01-4 0v-1z"/></svg>
+          Buy Ticket — KES 100
+        </a>
+        <div class="final-social">
+          <p class="social-label">Follow for live draws every Friday:</p>
+          <div class="social-row">
+            <a href="https://tiktok.com/@NextBigWinKe" class="s-btn s-tiktok" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.81a8.17 8.17 0 004.77 1.52V6.89a4.85 4.85 0 01-1-.2z"/></svg>
+              TikTok
+            </a>
+            <a href="https://instagram.com/NextBigWinKe" class="s-btn s-instagram" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              Instagram
+            </a>
+            <a href="https://youtube.com/@NextBigWinKe" class="s-btn s-youtube" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+              YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="NextBigWin" class="footer-logo" />
+          <p>Kenya's largest youth raffle. Real wins. Real dreams. Just 100 bob.</p>
+          <div class="footer-socials">
+            <a href="https://tiktok.com/@NextBigWinKe" target="_blank" class="f-social" title="TikTok">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.81a8.17 8.17 0 004.77 1.52V6.89a4.85 4.85 0 01-1-.2z"/></svg>
+            </a>
+            <a href="https://instagram.com/NextBigWinKe" target="_blank" class="f-social" title="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://youtube.com/@NextBigWinKe" target="_blank" class="f-social" title="YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+            </a>
+            <a href="https://wa.me/254700000000" target="_blank" class="f-social" title="WhatsApp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#prizes">Current Prizes</a></li>
+            <li><a href="#winners">Past Winners</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#terms">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul class="contact-list">
+            <li>📞 +254 700 000 000</li>
+            <li>📧 hello@nextbigwin.co.ke</li>
+            <li>📍 Nairobi, Kenya</li>
+          </ul>
+          <a href="https://wa.me/254700000000?text=Hi%20NextBigWin!" class="wa-link" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Support
+          </a>
+        </div>
+        <div class="footer-col">
+          <h4>Get Winner Alerts</h4>
+          <p class="newsletter-sub">Be first to know about draws and new prizes.</p>
+          <form class="nl-form" onsubmit="handleNewsletter(event)">
+            <input type="email" placeholder="your@email.com" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 NextBigWin. All rights reserved. | Licensed by BCLB Kenya | <a href="#terms">Terms</a> | <a href="#">Privacy Policy</a></p>
+        <p class="disclaimer">NextBigWin is a licensed raffle operator under Kenyan law. Participants must be 18+. Please play responsibly.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════
+       STICKY MOBILE CTA
+  ═══════════════════════════════════════ -->
+  <div class="sticky-cta" id="stickyCTA">
+    <a href="#buy" class="sticky-btn">🎟️ Buy Ticket — KES 100</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       WHATSAPP FAB
+  ═══════════════════════════════════════ -->
+  <a href="https://wa.me/254700000000?text=Hi%20NextBigWin!%20I%20want%20to%20buy%20a%20ticket." class="wa-fab" target="_blank" rel="noopener" title="WhatsApp Support">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ═══════════════════════════════════════
+       BUY TICKET MODAL
+  ═══════════════════════════════════════ -->
+  <div class="modal-overlay" id="buyModal" role="dialog" aria-modal="true" aria-label="Buy Ticket">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+
+      <!-- Step 1: Enter details -->
+      <div id="buyStep1">
+        <h2>&#127903; Buy Your Ticket</h2>
+        <p class="modal-sub">Kenya's largest youth raffle — just KES 100 per ticket.</p>
+
+        <form id="buyForm" novalidate>
+          <label class="modal-label" for="buyPhone">M-PESA Phone Number</label>
+          <input id="buyPhone" class="modal-input" type="tel" placeholder="e.g. 0712 345 678" autocomplete="tel" required />
+
+          <label class="modal-label">Number of Tickets</label>
+          <div class="qty-row">
+            <button type="button" class="qty-preset active" data-qty="1">1</button>
+            <button type="button" class="qty-preset" data-qty="5">5</button>
+            <button type="button" class="qty-preset" data-qty="10">10</button>
+            <input id="buyQty" type="number" min="1" max="10" value="1" class="modal-input" style="width:80px;margin-bottom:0;text-align:center;" />
+          </div>
+
+          <div class="modal-total">
+            <p>Total Amount</p>
+            <strong id="buyTotal">KES 100</strong>
+          </div>
+
+          <button type="submit" class="btn-primary modal-submit" id="buySubmit">
+            &#128241; Pay with M-PESA
+          </button>
+          <p class="modal-note">You'll receive an M-PESA PIN prompt on your phone.<br>Your Ticket ID will arrive via SMS within 60 seconds.</p>
+        </form>
+      </div>
+
+      <!-- Step 2: Waiting for M-PESA -->
+      <div id="buyStep2" style="display:none">
+        <div class="stk-waiting">
+          <div class="stk-spinner"></div>
+          <h3>Check Your Phone</h3>
+          <p id="stkMessage">An M-PESA prompt has been sent to your phone. Enter your PIN to confirm payment.</p>
+          <p id="pollProgress"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

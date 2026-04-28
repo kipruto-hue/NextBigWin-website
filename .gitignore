@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Environment variables — never commit real secrets
+.env
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
+
+# Build artifacts
+dist/
+build/
+
+# Old root-level files (frontend now lives in public/)
+/index.html
+/style.css
+/script.js
+/assets/
