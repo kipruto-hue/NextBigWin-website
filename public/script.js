@@ -250,6 +250,92 @@ function startPolling(cid) {
   }, 5000);
 }
 
+/* ── BIGGY AI ──────────────────────────────────────────────── */
+const BIGGY_KB = [
+  { k: ['buy','ticket','purchase','get','how','start','begin','join','play'], r: "Buying is easy! 🎟️\n1. Click <strong>Buy Ticket</strong> on this page\n2. Enter your M-PESA number\n3. Choose 1–10 tickets\n4. Approve the M-PESA prompt on your phone\n5. Your Ticket ID arrives via SMS in ~60 sec. Each ticket is KES 100." },
+  { k: ['price','cost','how much','ksh','kes','100','fee'], r: "Each ticket costs just <strong>KES 100</strong> 💰 — that's all. No hidden fees. Buy up to 10 tickets per transaction to multiply your chances!" },
+  { k: ['prize','win','award','reward','car','phone','cash','laptop','million'], r: "Our prizes are BIG 🏆\n• <strong>1st Prize:</strong> KES 500,000 cash or a brand-new car\n• <strong>2nd Prize:</strong> Latest iPhone or KES 100,000\n• <strong>3rd Prize:</strong> KES 50,000 cash\nCheck the Prizes section for the current draw's full prize list!" },
+  { k: ['draw','when','date','friday','time','next','schedule'], r: "Draws happen every <strong>Friday at 8:00 PM EAT</strong> 🗓️\nWatch it LIVE on <strong>@NextBigWinKe</strong> on TikTok and Instagram. The countdown timer at the top of this page shows exactly how long until the next draw." },
+  { k: ['winner','chosen','selected','picked','fair','random','how win'], r: "Winners are chosen by a <strong>cryptographically secure RNG</strong> — completely random and tamper-proof 🎲\nEvery ticket has an equal chance. The draw is streamed LIVE so you can watch in real time. The winner is verified by our BCLB license." },
+  { k: ['ussd','dial','code','*123','offline','no internet','no data'], r: "No smartphone? No problem! 📱\nDial <strong>*123#</strong> on any phone — even a basic one — to buy tickets, check your entries, or verify your Ticket ID. Works on all Kenyan networks." },
+  { k: ['mpesa','m-pesa','safaricom','paybill','stk','push','payment'], r: "We use <strong>Lipa Na M-PESA</strong> (STK Push) for secure payments 🔒\nAfter entering your number, you'll get a pop-up on your phone to enter your M-PESA PIN. Your tickets are confirmed within 60 seconds." },
+  { k: ['verify','check','confirm','my ticket','ticket id','nbw'], r: "To verify your ticket:\n• Dial <strong>*123#</strong> → select 'Verify Ticket'\n• Or ask me: type your Ticket ID (format: NBW-2024-XXXXXXXXX) and I'll confirm it!\nAlways keep your Ticket ID safe — it's your proof of entry." },
+  { k: ['claim','collect','i won','how to claim','prize claim'], r: "Congratulations in advance! 🥳 Winners have <strong>30 days</strong> to claim their prize after the draw.\nYou'll receive an SMS with instructions. Contact us at hello@nextbigwin.co.ke or call +254 700 000 000 to arrange collection." },
+  { k: ['license','bclb','legal','legit','scam','safe','trust','regulated'], r: "100% legit and safe ✅\nNextBigWin is <strong>licensed by BCLB Kenya</strong> (Betting Control and Licensing Board). We operate fully under Kenyan law. Your money and data are secure. Check our license details in the Terms section." },
+  { k: ['age','18','under','minor','eligible','qualify'], r: "You must be <strong>18 years or older</strong> to participate 🔞\nParticipation is open to all Kenyan residents aged 18+. Please play responsibly." },
+  { k: ['sms','message','confirmation','notification','receive'], r: "After a successful payment you'll receive:\n📩 An SMS with your <strong>Ticket ID</strong> (format: NBW-YYYY-XXXXXXXXX)\n📩 A draw reminder before each Friday\n📩 A winner notification if you win!\nSave the SMS — your Ticket ID is your entry proof." },
+  { k: ['hello','hi','hey','hii','sup','yo','howdy'], r: "Hey! 👋 Great to chat. I'm Biggy AI — NextBigWin's smart assistant.\nAsk me anything about tickets, prizes, draws, or winners. What would you like to know?" },
+  { k: ['thanks','thank you','cool','great','awesome','nice','perfect'], r: "You're welcome! 😊 Good luck in the next draw! 🍀\nRemember — every ticket is an independent chance to win BIG. Is there anything else I can help with?" },
+];
+
+function biggyMatch(msg) {
+  const m = msg.toLowerCase();
+  for (const entry of BIGGY_KB) {
+    if (entry.k.some(kw => m.includes(kw))) return entry.r;
+  }
+  return "Hmm, I'm not sure about that one 🤔 Try asking about:\n• <strong>Buying tickets</strong>\n• <strong>Prize details</strong>\n• <strong>Draw dates</strong>\n• <strong>Verifying your ticket</strong>\n\nOr email us at hello@nextbigwin.co.ke";
+}
+
+let biggyOpen = false;
+function toggleBiggy() {
+  biggyOpen = !biggyOpen;
+  document.getElementById('biggyPanel')?.classList.toggle('open', biggyOpen);
+  const badge = document.getElementById('biggyBadge');
+  if (badge) badge.classList.add('hidden');
+  const fab = document.getElementById('biggyFab');
+  if (fab) { fab.style.animation = biggyOpen ? 'none' : ''; }
+  if (biggyOpen) document.getElementById('biggyInput')?.focus();
+}
+function openBiggy() { if (!biggyOpen) toggleBiggy(); }
+document.getElementById('biggyClose')?.addEventListener('click', () => { biggyOpen = true; toggleBiggy(); });
+
+function biggyAppendMsg(text, from) {
+  const box = document.getElementById('biggyMessages');
+  if (!box) return;
+  const qr = document.getElementById('biggyQuickReplies');
+  if (qr) qr.remove();
+  const row = document.createElement('div');
+  row.className = 'biggy-msg biggy-msg--' + from;
+  const bub = document.createElement('span');
+  bub.className = 'biggy-bubble';
+  bub.innerHTML = text.replace(/\n/g, '<br>');
+  row.appendChild(bub);
+  box.appendChild(row);
+  box.scrollTop = box.scrollHeight;
+}
+
+function biggyTyping() {
+  const box = document.getElementById('biggyMessages');
+  if (!box) return null;
+  const row = document.createElement('div');
+  row.className = 'biggy-msg biggy-msg--bot';
+  row.innerHTML = '<div class="biggy-typing"><span></span><span></span><span></span></div>';
+  box.appendChild(row);
+  box.scrollTop = box.scrollHeight;
+  return row;
+}
+
+function biggySend(e) {
+  if (e) e.preventDefault();
+  const inp = document.getElementById('biggyInput');
+  if (!inp) return;
+  const msg = inp.value.trim();
+  if (!msg) return;
+  inp.value = '';
+  biggyAppendMsg(msg, 'user');
+  const typingEl = biggyTyping();
+  setTimeout(() => {
+    if (typingEl) typingEl.remove();
+    biggyAppendMsg(biggyMatch(msg), 'bot');
+  }, 700 + Math.random() * 400);
+}
+
+function biggyQuick(q) {
+  const inp = document.getElementById('biggyInput');
+  if (inp) inp.value = q;
+  biggySend(null);
+}
+
 function showSuccess(ticketId, maskedPhone) {
   if (buyStep2) {
     buyStep2.innerHTML =
