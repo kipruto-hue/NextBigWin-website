@@ -3,7 +3,7 @@
   --black:#000; --dark:#0a0a0a; --card:#111; --border:#1c1c1c;
   --border-gold:rgba(212,175,55,.25); --gold:#D4AF37; --gold-lt:#F0D060;
   --gold-dk:#8B6914; --red:#FF2D2D; --green:#22c55e; --white:#fff;
-  --muted:#666; --secondary:#aaa; --font:'Poppins',sans-serif;
+  --muted:#666; --secondary:#aaa; --font:'Bradley Hand ITC','Bradley Hand',cursive;
   --ease:.3s ease; --r:14px; --r-sm:8px; --r-lg:24px;
   --shadow-gold:0 0 40px rgba(212,175,55,.18);
   --glow-gold:0 0 20px rgba(212,175,55,.45);
